@@ -85,7 +85,6 @@ class RegisterActivity : AppCompatActivity() {
                         .show()
                 }
             }
-
             override fun onFailure(call: Call<ResponseBody?>, t: Throwable) {
                 Toast.makeText(this@RegisterActivity, t.message, Toast.LENGTH_LONG).show()
             }
