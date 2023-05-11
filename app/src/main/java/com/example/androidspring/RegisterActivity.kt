@@ -42,6 +42,7 @@ class RegisterActivity : AppCompatActivity() {
 
 // setting up the button to listen when it's clicked.
         buttonRegister.setOnClickListener{
+
 // calling the method registerUser
             registerUser()
         }
@@ -49,8 +50,8 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun registerUser() {
 
-//        val userName: String = etUsername.getText().toString().trim()
-//        val password: String = etPassword.getText().toString().trim()
+        val userName: String = etUsername.getText().toString().trim()
+        val password: String = etPassword.getText().toString().trim()
         if (userName.isEmpty()) {
             etUsername.setError("Username is required")
             etUsername.requestFocus()
@@ -72,7 +73,6 @@ class RegisterActivity : AppCompatActivity() {
                 } catch (e: IOException) {
                     e.printStackTrace()
                 }
-
                 if (s == "SUCCESS") {
                     Toast.makeText(
                         this@RegisterActivity,
