@@ -20,9 +20,10 @@
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:label="Login" />
         <activity
-            android:name=".MainActivity"
+            android:name=".RegisterActivity"
             android:exported="true" />
 <!--        <activity-->
 <!--            android:name=".Register"-->
@@ -30,7 +31,7 @@
 <!--            android:label="@string/title_activity_register"-->
 <!--            android:theme="@style/Theme.AndroidSpring" />-->
         <activity
-            android:name=".RegisterActivity"
+            android:name=".MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
