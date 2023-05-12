@@ -7,6 +7,7 @@ import retrofit2.http.POST;
 
 public interface API {
 
+// Two apis to post for register and login
     @POST("register")
     Call<ResponseBody> createUser (
             @Body User user   // Creating an object for the User class

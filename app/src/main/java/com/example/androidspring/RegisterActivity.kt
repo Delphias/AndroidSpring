@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import okhttp3.ResponseBody
@@ -14,7 +15,7 @@ import java.io.IOException
 
 
 class RegisterActivity : AppCompatActivity() {
-// lateinit allows us to avoid initializing variables when a constructor is  build/created (using the this. keyword to initialize them
+// lateinit allows us to avoid initializing variables when a constructor is build/created (using the this. keyword to initialize them
     private lateinit var password: String
     private lateinit var userName: String
     lateinit var etUsername: EditText
@@ -30,6 +31,9 @@ class RegisterActivity : AppCompatActivity() {
         etUsername= findViewById(R.id.etRUserName)
         etPassword= findViewById(R.id.etRPassword)
         buttonRegister= findViewById(R.id.btnRegister)
+        this.findViewById<TextView>(R.id.tvLoginLink).setOnClickListener{
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
 
 // buttonRegister.setOnClickListener{
 // declare as a global variable when testing with Toast
@@ -46,6 +50,7 @@ class RegisterActivity : AppCompatActivity() {
 // calling the method registerUser
             registerUser()
         }
+
     }
 
     private fun registerUser() {
@@ -89,6 +94,5 @@ class RegisterActivity : AppCompatActivity() {
                 Toast.makeText(this@RegisterActivity, t.message, Toast.LENGTH_LONG).show()
             }
         })
-
 }
 }
